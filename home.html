@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #6c63ff; /* purple tone */
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    header .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background: #f5f5f5;
+    }
+
+    .hero-text {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      margin-bottom: 20px;
+    }
+
+    .hero-text button {
+      padding: 10px 20px;
+      background: #6c63ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero img {
+      flex: 1;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    /* Expertise Section */
+    .expertise {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .expertise h2 {
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* About Section */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      background: #fafafa;
+    }
+
+    .about img {
+      flex: 1;
+      max-width: 300px;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .about-text {
+      flex: 2;
+    }
+
+    /* Certificates Section */
+    #certificates {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 40px;
+      background: #f5f5f5;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      button{
+        margin-bottom: 15px;
+      }
+      .about {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about img {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Preethi</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#about">About Me</a>
+      <a href="#contact">Contact Me</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p>Hey, I am Preethi</p>
+      <h1>I create Websites and I'm a <p style="color:  #6c63ff;">Fullstack Web Developer</p> (Fresher)</h1>
+      <button>Get In Touch</button>
+    </div>
+    <img src="img2.jpg" alt="Portfolio Image">
+  </section>
+
+  <!-- Expertise -->
+  <section class="expertise">
+    <h2>My Expertise</h2>
+    <div class="cards">
+      <div class="card">Fullstack Web Development (Frontend+Backend)</div>
+      <div class="card">Frontend Development using HTML, CSS, JavaScript & Bootstrap</div>
+      <div class="card">Database Management using MySQL</div>
+      <div class="card">Backend Development with Python (Django) and PHP</div>
+      <div class="card">Programming Fundamentals in C & Java</div>
+      <div class="card">Effective Communication skills</div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <img src="img1.jpg" alt="About Me">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I am currently pursuing my B.Tech degree in Information Technology at Global Institute of Engineering and Technology. I am passionate about fullstack development and creative web design.</p>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="projects">
+      <div class="project"><a href="certificatefullstack.pdf" target="_blank">Fullstack</a></div>
+      <div class="project"><a href="certificatetype.pdf" target="_blank">Typerating in English</a></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Details</h2>
+    <p>preethisugumar07@gmail.com</p>
+    <p>⭐⭐⭐⭐⭐</p>
+  </section>
+</body>
+</html>
