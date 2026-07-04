@@ -290,6 +290,12 @@ header nav a:hover {
     justify-content: center;
     transition: right 0.3s ease;
   }
+  .close-menu {
+  top: 15px;
+  left: 70%;
+  transform: translateX(-50%);
+}
+
 
   header nav.show {
     right: 0; /* slide in */
