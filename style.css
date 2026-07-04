@@ -254,46 +254,69 @@ header nav a:hover {
             margin-bottom: 20px;
         }
     }
- /* Hamburger icon */
+/* Hamburger icon */
 .menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
 }
 
 /* Close icon */
 .close-menu {
-  display: none;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-  position: absolute; /* pin it at top-right */
-  top: 15px;
-  right: 15px;
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  header {
-    position: relative;
-  }
 
-  header nav {
-    position: fixed;
-    top: 0;
-    right: -100%; /* hidden off screen */
-    height: 100%;
-    width: 220px;
-    background: #6c63ff;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: right 0.3s ease;
-  }
-  .close-menu {
-  top: 15px;
-  left: 70%;
-  transform: translateX(-50%);
+    header {
+        position: relative;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: #6c63ff;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        /* Push menu items below the X button */
+        justify-content: flex-start;
+        padding-top: 90px;
+
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    header nav.show {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .close-menu {
+        display: block;
+    }
+
+    header nav a {
+        display: block;
+        margin: 18px 0;
+        font-size: 18px;
+    }
 }
 
 
@@ -313,4 +336,4 @@ header nav a:hover {
     margin: 40px 0; /* push links down so they don’t collide */
     display: block;
   }
-}
+
