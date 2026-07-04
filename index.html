@@ -147,6 +147,20 @@
 
       elements.forEach(el => observer.observe(el));
     });
+    document.addEventListener("DOMContentLoaded", () => {
+      const projects = document.querySelectorAll(".project");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // play once
+          }
+        });
+      }, { threshold: 0.2 });
+
+      projects.forEach(project => observer.observe(project));
+    });
 
 
   </script>
