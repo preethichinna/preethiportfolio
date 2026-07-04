@@ -116,6 +116,37 @@
     closeMenu.addEventListener('click', () => {
       navLinks.classList.remove('show');
     });
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".card");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            // Optional: stop observing once visible
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 }); // trigger when 20% of card is visible
+
+      cards.forEach(card => {
+        observer.observe(card);
+      });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".card, .about img");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // play once
+          }
+        });
+      }, { threshold: 0.2 });
+
+      elements.forEach(el => observer.observe(el));
+    });
 
 
   </script>
