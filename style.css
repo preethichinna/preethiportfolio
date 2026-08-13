@@ -3,21 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* General link styling */
-a.project-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-
-/* Text inside the link */
-.project-link-text {
-  display: inline-block;
-  margin-top: 14px;
-  color: #8ec5ff;
-  font-weight: 700;
-}
 
 html {
     scroll-behavior: smooth;
@@ -293,7 +278,9 @@ body {
     color: #d7defa;
     font-size: 1.06rem;
 }
-
+a{
+    text-decoration:none;
+}
 .skills-grid,
 .projects-grid {
     display: grid;
