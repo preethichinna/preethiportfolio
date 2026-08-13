@@ -278,9 +278,6 @@ body {
     color: #d7defa;
     font-size: 1.06rem;
 }
-a{
-    text-decoration:none;
-}
 .skills-grid,
 .projects-grid {
     display: grid;
