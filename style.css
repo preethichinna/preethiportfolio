@@ -298,21 +298,22 @@ body {
     transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
-/* General link styling */
-a.project-link {
+/* Target only links inside projects-grid */
+.projects-grid a.project-link {
   display: block;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
 }
 
-/* Text inside the link */
-.project-link-text {
+/* Target the span inside the link */
+.projects-grid a.project-link .project-link-text {
   display: inline-block;
   margin-top: 14px;
   color: #8ec5ff;
   font-weight: 700;
 }
+
 
 
 .card:hover,
