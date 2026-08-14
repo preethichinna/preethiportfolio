@@ -1,138 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-
-    <title>Preethi Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+  </style>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0RFLG4SJLX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-0RFLG4SJLX');
+</script>
 
 <body>
-    <header class="site-header">
-        <div class="brand">Preethi Portfolio</div>
+  <!-- Header -->
+  <header>
+    <div class="logo">Preethi</div>
 
-        <nav class="nav-links" aria-label="Desktop navigation">
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="#projects">Project</a>
-            <a href="#skills">Skills</a>
-        </nav>
+    <!-- Hamburger icon (desktop hidden, mobile visible) -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
-            <span class="menu-icon">⌂</span>
-        </button>
-    </header>
+    <!-- Slide-in nav -->
+    <nav id="nav-links">
+      <!-- Close icon inside nav -->
+      <div class="close-menu" id="close-menu">✖</div>
+      <a href="#home">Home</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#about">About Me</a>
+      <a href="mailto:preethisugumar07@gmail.com">Email Me</a>
 
-    <div class="mobile-menu-panel" id="mobileMenu" aria-hidden="true">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+  </header>
+
+
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p>Hey, I am Preethi</p>
+      <h1>
+        I create Websites and I'm a
+        <span class="gradient" style="color: #6c63ff;">Fullstack Web Developer</span> (Fresher)
+      </h1>
+      <button onclick="window.open('https://www.linkedin.com/in/preethi-sugumar-a2277338a/', '_blank');">
+        Get In Touch
+      </button>
     </div>
 
-    <div class="hero" id="home">
-        <div class="overlay"></div>
+    <!-- For Instagram profile, you can replace the link in onclick -->
+    <!-- <button onclick="window.open('https://www.instagram.com/_preethi_c7_', '_blank');">Get In Touch</button> -->
 
-        <div class="hero-container">
-            <div class="hero-content" data-aos="fade-right">
-                <span class="badge">Portfolio</span>
-                <h1>Preethi Sugumar</h1>
-                <p>Full Stack Developer & Creative Web Designer</p>
-                <div class="hero-caption">
-                    Building polished digital experiences with a strong focus on user journey, visual clarity, and professional execution.
-                </div>
-            </div>
+    <img src="img2.jpg" alt="Portfolio Image">
+  </section>
 
-            <div class="video-wrapper" data-aos="fade-left">
-                <div class="phone-frame">
-                    <video id="introVideo" class="background-video" autoplay muted playsinline loop>
-                        <source src="preethiintro.mp4" type="video/mp4">
-                    </video>
 
-                    <button id="soundBtn" aria-label="Enable sound">
-                        Enable Sound
-                    </button>
-                </div>
-            </div>
-        </div>
+  <!-- Expertise -->
+  <section class="expertise">
+    <h2>My Expertise</h2>
+    <div class="cards">
+      <div class="card">Fullstack Web Development (Frontend+Backend)</div>
+      <div class="card">Frontend Development using HTML, CSS, JavaScript & Bootstrap</div>
+      <div class="card">Database Management using MySQL</div>
+      <div class="card">Backend Development with Python (Django) and PHP</div>
+      <div class="card">Programming Fundamentals in C & Java</div>
+      <div class="card">Effective Communication skills</div>
     </div>
+  </section>
 
-    <section id="about" class="section" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>
-            I am currently pursuing my B.Tech degree in Information Technology at Global Institute of Engineering and Technology.
-            I am passionate about full-stack development, problem-solving, and designing clean, user-friendly digital experiences.
-            Through my work, I aim to combine technical accuracy with creative thinking to build meaningful, modern web solutions that make a lasting impression.
-        </p>
-    </section>
+  <!-- About -->
+  <section id="about" class="about">
+    <img src="img1.jpg" alt="About Me">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I am currently pursuing my B.Tech degree in Information Technology at Global Institute of Engineering and
+        Technology. I am passionate about fullstack development and creative web design.</p>
+    </div>
+  </section>
 
-    <section id="skills" class="section" data-aos="fade-up">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="card">Fullstack Web Development (Frontend+Backend)</div>
-            <div class="card">Frontend Development using HTML, CSS, JavaScript & Bootstrap</div>
-            <div class="card">Database Management using MySQL</div>
-            <div class="card">Backend Development with Python (Django) and PHP</div>
-            <div class="card">Programming Fundamentals in C & Java</div>
-            <div class="card">Effective Communication skills</div>
-        </div>
-    </section>
+  <!-- Certificates -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="projects">
+      <div class="project"><a href="certificatefullstack.pdf" target="_blank">Fullstack</a></div>
+      <div class="project"><a href="certificatetype.pdf" target="_blank">Typerating in English</a></div>
+    </div>
+  </section>
 
-    <section id="projects" class="section" data-aos="fade-up">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <a class="project-card project-link" href="https://todowithdate.infinityfreeapp.com/" target="_blank" rel="noreferrer">
-                <h3>Date-Specific Todo Manager</h3>
-                <p>A effective task management website with date-specific functionality and also track the progress of each day task.</p>
-                <span class="project-link-text">Open Project →</span>
-            </a>
-            <a class="project-card project-link" href="https://preethichinna.github.io/preethiportfolio/" target="_blank" rel="noreferrer">
-                <h3>Portfolio Experience</h3>
-                <p>Creative web portfolio with smooth motion, glassmorphism styling, and clean UI details.</p>
-                <span class="project-link-text">Open Project →</span>
-            </a>
-            <a class="project-card project-link" href="#" target="_blank" rel="noreferrer">
-                <h3>Resume-Builder</h3>
-                <p>A resume builder application with a modern UI and seamless user experience.</p>
-                <span class="project-link-text">Open Project →</span>
-            </a>
-        </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Details</h2>
+    <p>preethisugumar07@gmail.com</p>
+    <p>⭐⭐⭐⭐⭐</p>
+  </section>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const closeMenu = document.getElementById('close-menu');
 
-    <section id="projects" class="section" data-aos="fade-up">
-        <h2>Certificates</h2>
-        <div class="projects-grid">
-            <a class="project-card project-link" href="certificatefullstack.pdf" target="_blank" rel="noreferrer">
-                <h3>Fullstack Development</h3>
-                <p>Master Program in Fullstack Development using Python</p>
-                <span class="project-link-text">Open Certificate →</span>
-            </a>
-            <a class="project-card project-link" href="certificatetype.pdf" target="_blank" rel="noreferrer">
-                <h3>Type Writing</h3>
-                <p>Type Writing Certification in both Junior and Senior</p>
-                <span class="project-link-text">Open Certificate →</span>
-            </a>
-        </div>
-    </section>
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.add('show');
+    });
 
-    <section id="contact" class="section contact-section" data-aos="fade-up">
-        <div class="contact-card">
-            <h2>Contact Details</h2>
-            <div class="contact-links">
-                <a class="gmail-link" href="mailto:preethisugumar07@gmail.com" target="_blank" rel="noreferrer">Gmail</a>
-                <a class="github-link" href="https://github.com/preethichinna" target="_blank" rel="noreferrer">GitHub</a>
-                <a class="linkedin-link" href="https://www.linkedin.com/in/preethi-sugumar-a2277338a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noreferrer">LinkedIn</a>
-            </div>
-            <p>⭐⭐⭐⭐⭐</p>
-            <p>Professional Projection: I am actively looking forward to opportunities where I can contribute my skills in web development, design thinking, and collaborative problem-solving.</p>
-        </div>
-    </section>
+    closeMenu.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".card");
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script src="script.js"></script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            // Optional: stop observing once visible
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 }); // trigger when 20% of card is visible
+
+      cards.forEach(card => {
+        observer.observe(card);
+      });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".card, .about img");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // play once
+          }
+        });
+      }, { threshold: 0.2 });
+
+      elements.forEach(el => observer.observe(el));
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+      const projects = document.querySelectorAll(".project");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // play once
+          }
+        });
+      }, { threshold: 0.2 });
+
+      projects.forEach(project => observer.observe(project));
+    });
+
+
+  </script>
 </body>
+
 </html>
